@@ -1,6 +1,23 @@
 ﻿<!doctype html>
 <html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US">
   <head>
+    <!-- Event snippet for Page view conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-16650451980/MJBTCPnzxcoZEIz4xoM-',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+  
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="initial-scale=1">
 
